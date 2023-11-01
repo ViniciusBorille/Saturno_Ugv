@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+.menu {
+    background: #7D00A9;
+    width: 55px;
+    height: 80vh;
+    margin: 30px 0;
+    position: fixed;
+    transition: 1000ms;
+    font-family: 'Kalam', cursive;
+    color: #FFF;
+}
+
+.menu-ext {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 0.5em;
+}
+
+.menu-ext:hover {
+    background-color: #ec6dff6e;
+    cursor: pointer;
+}
+
+.menu-links {
+    color: #FFF;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 16px;
+    margin-left: 0.5em;
+}
+
+.menu:hover {
+    width: 222px;
+    box-shadow: 8px 4px 5px 0px rgba(0, 0, 0, 0.50);
+    transition: 700ms;
+}
+
+.logo-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.5em 15% 0 0;
+}
+
+.logo-menu-text {
+    font-weight: 40;
+    margin: 0;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    margin-top: 2px;
+}
+
+.hide {
+    display: none;
+}

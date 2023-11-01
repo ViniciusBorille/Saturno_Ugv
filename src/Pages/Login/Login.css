@@ -1,0 +1,112 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    height: calc(100vh - 120px);
+    background-image: url('../../Components/Images/fundo.png');
+}
+
+.log-pg {
+    display: flex;
+    align-items: center;
+    width: 60vw;
+    height: 70%;
+}
+
+.lgn-pg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px 70px;
+    border-radius: 16px 0 0 16px;
+    background: #9813BF;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+}
+
+.lgn-pg:focus {
+    background: #E85AFF;
+}
+
+.img-lgn {
+    align-items: center;
+    margin: auto;
+
+}
+
+.cadas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 20px 70px;
+    border-radius: 0 16px 16px 0;
+    background: #9813BF;
+    width: 50%;
+    text-align: center;
+    height: 100%;
+}
+
+.cadas:focus-visible {
+    background: #E85AFF;
+}
+
+.cadas:focus {
+    background: #E85AFF;
+}
+
+.title-lgn {
+    color: #FFF;
+    font-weight: 400;
+    margin: 0;
+}
+
+.input {
+    width: 90%;
+    padding: 0.5em;
+    color: #222;
+    margin: 0.3em 0;
+}
+
+.input::placeholder {
+    color: #999;
+}
+
+.hide {
+    display: none;
+    background: #9813BF;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    padding: 20px;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #FFF;
+}
+
+.separator::before {
+    margin-right: 2em;
+}
+
+.separator::after {
+    margin-left: 2em;
+}
+
+.txt{
+    color: #FFF;
+}
+.txt:hover{
+    cursor: pointer;
+}

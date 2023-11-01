@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.card {
+    background: #F6BFFF;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 20%;
+    margin: 30px;
+    color: #FFF;
+}
+
+.info-card {
+    background: #E69EFF;
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.30);
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.title-card {
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+.regua {
+    display: block;
+    padding: 0;
+    margin: 10px auto;
+    width: 90%;
+    height: 1px;
+    background-color: #FFF;
+}
+
+.desc-card {
+    font-size: 16px;
+}
+
+.img-card {
+    width: 100%;
+}

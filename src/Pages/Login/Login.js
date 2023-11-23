@@ -8,77 +8,92 @@ import Button from '../../Components/Button/Button';
 
 const Login = () => {
 
-    const [showLogin, setShowLogin] = useState(true);
+    const [isLogin, setIsLogin] = useState(true);
+    const [isSignup, setIsSignup] = useState(false);
 
-    const [showCadastro, setShowCadastro] = useState(false);
-
-    const [backgroundColorLogin, setBackgroundColorLogin] = useState('rgba(232, 90, 255, 1)');
-
-    const [backgroundColorCadastro, setBackgroundColorCadastro] = useState('rgba(152, 19, 191, 1)');
-
-    const focusLogin = () => {
-        setShowLogin(true)
-        setShowCadastro(false)
-        changeBackground()
+    function handleLogin() {
+        setIsLogin(true);
+        setIsSignup(false);
     }
 
-    const focusCadastro = () => {
-        setShowLogin(false)
-        setShowCadastro(true)
-        changeBackground()
-    }
-
-
-    const changeBackground = () => {
-        if(showCadastro === true){
-            setBackgroundColorLogin('rgba(232, 90, 255, 1)')
-            setBackgroundColorCadastro('rgba(152, 19, 191, 1)')
-        }else if(showCadastro === false){
-            setBackgroundColorLogin('rgba(152, 19, 191, 1)')
-            setBackgroundColorCadastro('rgba(232, 90, 255, 1)')
-        }
+    function handleSignup() {
+        setIsLogin(false);
+        setIsSignup(true);
     }
 
     return (
-        <div className='login'>
-            <header>
-                <Navbar></Navbar>
-            </header>
-            <main className='main'>
-                <div className='log-pg'>
-                    <div className='lgn-pg' onClick={focusLogin} style={{backgroundColor: backgroundColorLogin}}>
-                        <div className={`login-pg ${showLogin ? '' : 'hide'}`}>
-                            <h1 className='title-lgn'>LOGIN</h1>
-                            <input type='email' className="input" placeholder='E-mail' />
-                            <input type='password' className="input" placeholder='Senha' />
-                            <p className='txt'>Esqueci minha senha</p>
-                            <Button title="Entrar"/>
-                            <p className='separator'>Ou se preferir</p>
-                            <input type='button' value='Entrar com facebook' />
-                            <input type='button' value='Entrar com uma conta google' />
+        <body className={`${isLogin ? "sign-in-js" : ""} ${isSignup ? "sign-up-js" : ""}`}>
+
+                <div className="background-container">
+                    <div className="container">
+                        <div className={`content first-content`}>
+                            <div className="first-column">
+                                <img src={Rocket} />
+                                <br />
+                                <button id="signin" className="btnl btn-primaryl" onClick={handleLogin}>Entrar</button>
+                            </div>
+                            <div className="second-column">
+                                <h2 className="title title-second">Cadastre-se</h2>
+                                <form className="form">
+                                    <label className="label-input" for="">
+                                        <input type="text" placeholder="Nome" />
+                                    </label>
+                                    <label className="label-input" for="">
+                                        <input type="text" placeholder="Sobrenome" />
+                                    </label>
+                                    <label className="label-input" for="">
+                                        <input type="email" placeholder="Email" />
+                                    </label>
+
+                                    <label className="label-input" for="">
+                                        <input type="password" placeholder="Senha" />
+                                    </label>
+
+
+                                    <button className="btnl btn-secondl">Cadastrar</button>
+                                </form>
+                                <br />
+                                <div className="lined-paragraph">
+                                    <p className="paragraph">Ou se preferir</p>
+                                </div>
+                                <button className="btn-facebook">Entrar com o Facebook</button>
+
+                                <button className="btn-google">Entrar com uma conta Google</button>
+                            </div>
                         </div>
-                        <img src={Rocket} className={`img-login ${showLogin ? 'hide' : ''}`} />
-                    </div>
-                    <div className='cadas' onClick={focusCadastro} style={{backgroundColor: backgroundColorCadastro}}>
-                        <div className={`cadas-pg ${showCadastro ? '' : 'hide'}`}>
-                            <h1 className='title-lgn'>CADASTRE-SE</h1>
-                            <input type='text' className='input' placeholder='Nome'></input>
-                            <input type='text' className='input' placeholder='Sobrenome'></input>
-                            <input type='email' className="input" placeholder='E-mail' />
-                            <input type='password' className="input" placeholder='Senha' />
-                            <Button title="Cadastrar"/>
-                            <p className='separator'>Ou se preferir</p>
-                            <input type='button' value='Entrar com facebook' />
-                            <input type='button' value='Entrar com uma conta google' />
+                        <div className={`content second-content`}>
+                            <div className="first-column">
+                                <img src={Astronaut} />
+                                <br />
+                                <button id="signup" className="btnl btn-primaryl" onClick={handleSignup}>sign up</button>
+                            </div>
+                            <div className="second-column">
+                                <h2 className="title title-second">LOGIN</h2>
+                                <form className="form">
+
+                                    <label className="label-input" for="">
+                                        <input type="email" placeholder="Email" />
+                                    </label>
+
+                                    <label className="label-input" for="">
+                                        <input type="password" placeholder="Senha" />
+                                    </label>
+
+                                    <a className="password" href="#">Esqueci minha senha</a>
+                                    <button className="btnl btn-secondl">Entrar</button>
+                                </form>
+                                <br />
+                                <div className="lined-paragraph">
+                                    <p className="paragraph">Ou se preferir</p>
+                                </div>
+                                <button className="btn-facebook">Entrar com o Facebook</button>
+
+                                <button className="btn-google">Entrar com uma conta Google</button>
+                            </div>
                         </div>
-                        <img src={Astronaut} className={`img-cadas ${showCadastro ? 'hide' : ''}`} />
                     </div>
                 </div>
-            </main>
-            <footer>
-                <Footer></Footer>
-            </footer>
-        </div>
+        </body>
     )
 }
 export default Login;

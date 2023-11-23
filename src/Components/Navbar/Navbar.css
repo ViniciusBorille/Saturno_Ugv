@@ -1,61 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
 
 .navbar {
+    padding-left: 10px;
+}
+
+.nav-bg {
     background: #7D00A9;
-    display: flex;
-    justify-content: space-between;
-    width: 100vw;
-    height: 60px;
-    padding: 1px 2% 12px;
-    box-sizing: border-box;
 }
 
-.logo_nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.texto-logo{
+    font-family: Kalam;
+    font-size: 28px;
 }
-
-.logo_nav:hover{
-    cursor: pointer;
-}
-
-.logo {
+.logo-logo{
     width: 40px;
     height: 40px;
-    position: relative;
-    bottom: 3px;
-}
-
-.logo_title {
-    color: #FFF;
-    font-family: 'Kalam', cursive;
-    font-size: 35px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.src {
-    border-radius: 6px;
-    background: #D9D9D9;
-    width: 20%;
-    position: absolute;
-    right: 5%;
-    padding: 0.6em 1em;
-    border: none;
-}
-
-.src::placeholder {
-    color: #737373;
-    font-family: HeadlandOne;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
+    margin-right: 10px;
 }
